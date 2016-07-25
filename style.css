@@ -1,0 +1,95 @@
+/*
+Theme Name: Erik
+Theme URI: https://erik.dev-heroes.net
+Author: tdatu team
+Author URI: https://github.com/tdatu
+Description: Wordpress theme for photography portfolio and art exhibits alike.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: erik
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body#content
+{
+    background-color: #EDEDED;
+}
+
+/** NAVIGATION **/
+div#navigation
+{
+    font-family: 'quicksand-reg';
+    min-height: 100px;
+    line-height: 100px;
+}
+
+div#site-title
+{
+    font-size: 2.1em;
+    padding: 0px 40px;
+}
+
+div#navigation a
+{
+    color: black;
+}
+
+div#navigation a:hover
+{
+    text-decoration: underline;
+}
+
+div#navigation a:active
+{
+    text-decoration: underline;
+}
+
+div.nav-item
+{
+    padding: 0 40px;
+}
+
+/** END NAVIGATION **/
+
+
+/*** FOOTER ***/
+
+div#footer
+{
+    min-height: 240px;
+    background-color: #D2D2D2;
+    padding: 40px 0;
+}
+
+.channels
+{
+    font-size: 1.4em;
+}
+
+.channels span
+{
+    font-size: 2.5em;
+    margin: 0 50px 0 0;
+    color: #3B5998;
+}
+
+
+/*** END FOOTER ****/
+
+/*** GRID ***/
+
+.grid-item
+{
+    overflow: hidden;
+    /** border: 1px solid black; **/
+    padding: 0!important;
+    float: left;
+}
+
+
+/*** END GRID **/
+
