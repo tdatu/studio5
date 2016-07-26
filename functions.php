@@ -9,10 +9,11 @@ function load_scripts()
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/dist/css/bootstrap.min.css');
 
     //imagesloaded
-    wp_enqueue_script('images-loaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.js', array('masonry', 'jquery'));
+    wp_register_script('images-loaded', get_template_directory_uri() . '/bower_components/imagesloaded/imagesloaded.js', array('jquery-masonry', 'jquery'));
 
     //main js 
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/main.js', array('jquery', 'jquery-masonry', 'underscore', 'backbone', 'wp-api', 'images-loaded'), "1.0", true);
+    wp_register_script('main-js', get_template_directory_uri() . '/js/main.js', array('jquery', 'jquery-masonry', 'underscore', 'backbone', 'wp-api','images-loaded'), "1.0", true);
+    wp_enqueue_script('main-js');
 
     //dashicons
     wp_enqueue_style( 'dashicons' );

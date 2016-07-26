@@ -24,8 +24,23 @@
         success: function(posts){
 
             var template = _.template($('#grid-item-template').html());
-            $('div.grid').html(template({data: posts}));
 
+            _.each(posts, function(post){
+                    if ( post.thumbnail !== "" )
+                    {
+                        var url = post.thumbnail.split(" ");
+                        console.log(url);
+                        var cleanUrl = url[3];
+                        cleanUrl = cleanUrl.replace('src=\"', '');
+                        cleanUrl = cleanUrl.replace('\"', '');
+                        post.thumbnailUrl = cleanUrl;
+
+                        //append each template
+                        $('div.grid').append(template(post));                        
+                    }
+            });
+
+            /** 
             var elem = document.querySelector('.grid');
             var msnry = new Masonry( elem, {
                 itemSelector: '.grid-item'
@@ -33,7 +48,14 @@
 
             $('.grid-item > img').load(function(){
                 console.log('new image loaded');
-       
+            });
+
+            **/
+
+            var elem = document.querySelector('.grid');
+            var msnry = new Masonry( elem, {
+                itemSelector: '.grid-item', 
+                gutter: 0
             });
         }
     });
@@ -57,4 +79,4 @@
     });
  */
 
-})(jQuery, jQuery-Masonry);
+})(jQuery);
